@@ -39,4 +39,20 @@ body {
     padding: 20px;
 }
 
+.container-footer {
+    color:#0A3871;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-footer a {
+    margin-bottom: 5px;
+}
+
+
+
+
 
