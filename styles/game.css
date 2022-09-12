@@ -1,0 +1,43 @@
+:root {
+    --darkblue: #0a3871;
+}
+
+.game-page {
+    height: 95vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.container__game {
+    height: 100%;
+}
+
+.container__btns {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-newGame {
+    background: var(--darkblue);
+    border: none;
+    border-radius: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    height: 67px;
+    width: 332px;
+    color: #fff;
+}
+
+.btn-desist {
+    width: 332px;
+    height: 67px;
+    border: 1px solid var(--darkblue);
+    border-radius: 24px;
+    color: var(--darkblue);
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+}
