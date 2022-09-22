@@ -2,20 +2,54 @@
     --darkblue: #0a3871;
 }
 
-.game-page {
-    height: 95vh;
-    font-family: 'Inter', sans-serif;
-}
-
 .container__game {
     height: 100%;
+}
+
+.container__ahorcado {
+    margin: 6rem auto 4rem auto;
+    text-align: center;
+    width: 20rem;
+    height: 25rem;
+}
+
+#ahorcado {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.guessed-words {
+    color: var(--darkblue);
+    display: flex;
+    font-size: 1.8rem;
+    justify-content: center;
+}
+
+.word {
+    text-align: center;
+    margin: 15px;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.guessed {
+    padding: 1rem;
+    border-bottom: 3px solid var(--darkblue);
+}
+
+.wrong-words {
+    color: #495057;
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .container__btns {
     display: flex;
     flex-direction: row;
     align-content: space-around;
-    gap: 8px;
+    gap: 2rem;
     justify-content: center;
 }
 

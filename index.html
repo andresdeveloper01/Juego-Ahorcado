@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./images/icon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./styles/home.css" />
     <link rel="stylesheet" href="./styles/game.css" />
+    <link rel="stylesheet" href="./styles/newWord.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,6 +21,7 @@
       <img src="./images/logo.svg" alt="Logo Alura" />
     </header>
 
+    <!--Pagina principal -->
     <section class="home-page">
       <div class="btns">
         <button class="btn-start">Iniciar juego</button>
@@ -27,8 +29,25 @@
       </div>
     </section>
 
+    <!--Pagina del juego del Ahorcado -->
     <section class="game-page">
       <div class="container__game">
+        <div class="container__ahorcado">
+          <img id="ahorcado" src="./images/ahorcado01.png" alt="ahorcado" />
+        </div>
+        <div class="guessed-words">
+          <span class="word guessed">A</span>
+          <span class="word guessed">L</span>
+          <span class="word guessed"></span>
+          <span class="word guessed"></span>
+          <span class="word guessed">A</span>
+        </div>
+        <div class="wrong-words">
+          <span class="word wrong">B</span>
+          <span class="word wrong">J</span>
+          <span class="word wrong">K</span>
+          <span class="word wrong">C</span>
+        </div>
         <div class="container__btns">
           <button class="btn-newGame">Nuevo juego</button>
           <button class="btn-desist">Desistir</button>
@@ -36,15 +55,35 @@
       </div>
     </section>
 
-    <footer class="container-footer">
-      <p>Creado por AndresDev</p>
-      <a href="https://www.linkedin.com/in/andres-pulupa/" target="_blank"
-        ><img src="./images/iconoLinkedin.svg" alt="logo de linkedin"
-      /></a>
-      <a href="https://github.com/andresdeveloper01" target="_blank"
-        ><img src="./images/iconoGithub.svg" alt="logo de github"
-      /></a>
+    <!--Pagina agregar nueva palabra-->
+    <section class="newWord-page">
+      <div class="container__newWord">
+        <textarea
+          type="text"
+          placeholder="Ingrese una nueva palabra"
+        ></textarea>
+        <img src="./images/exclamacion.svg" alt="signo de exclamacion" />
+        <p>Max. de 8 letras</p>
+        <div class="btns__newWord">
+          <button class="btn__guardar">Guardar y empezar</button>
+          <button class="btn__cancelar">Cancelar</button>
+        </div>
+      </div>
+    </section>
+
+    <!--rondapie-->
+    <footer>
+      <div class="container-footer">
+        <p>Creado por AndresDev</p>
+        <a href="https://www.linkedin.com/in/andres-pulupa/" target="_blank"
+          ><img src="./images/iconoLinkedin.svg" alt="logo de linkedin"
+        /></a>
+        <a href="https://github.com/andresdeveloper01" target="_blank"
+          ><img src="./images/iconoGithub.svg" alt="logo de github"
+        /></a>
+      </div>
     </footer>
     <script src="./src/main.js"></script>
+    <script src="./src/horca.js"></script>
   </body>
 </html>
