@@ -33,14 +33,27 @@ function randomWord() {
   const random = Math.floor(Math.random() * words.length);
   const rWord = words[random].toUpperCase();
   secretWord = rWord;
-  drawHanged();
-  drawLine();
+  draw(gameHorca);
 }
 
 function startGame() {
   document.querySelector(".home-page").style.display = "none";
   document.querySelector(".game-page").style.display = "block";
   randomWord();
+
+  document.onkeydown = (e) => {
+    let letter = e.key.toUpperCase();
+    let guessed = gameHorca.guessed;
+    if (checkLetter(letter) && secretWord.indexOf(letter)) {
+      for (let i = 0; i < secretWord.length; i++) {
+        if (secretWord[i] === letter) {
+          guessed.push(letter);
+          console.log(secretWord);
+        }
+      }
+    }
+  };
+  console.log(secretWord);
 }
 
 function addnewWord() {
