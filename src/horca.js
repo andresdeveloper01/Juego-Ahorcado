@@ -17,13 +17,13 @@ function draw(gameHorca) {
   $elem = $html.ahorcado;
   $elem.src = "./images/ahorcado0" + gameHorca.state + ".png";
   // Crear letras adivinadas
-  let guessed = gameHorca.guessed;
   $elem = $html.guessed;
   for (let i = 0; i < secretWord.length; i++) {
     let $span = document.createElement("span");
     let $text = document.createTextNode("");
-    if (guessed.indexOf(secretWord[i]) >= 0) {
+    if (gameHorca.guessed.indexOf(secretWord[i]) >= 0) {
       $text.nodeValue = secretWord[i];
+      console.log(secretWord[i]);
     }
     $span.setAttribute("class", "word guessed");
     $span.appendChild($text);
@@ -42,18 +42,14 @@ function draw(gameHorca) {
 }
 
 function checkLetter(key) {
-  let state2 = false;
-
   if (
     (key >= 65 && letters.indexOf(key)) ||
     (key <= 90 && letters.indexOf(key))
   ) {
     letters.push(key);
-    console.log(key);
-    return state2;
+    return false;
   } else {
-    state2 = true;
     console.log(key);
-    return;
+    return true;
   }
 }

@@ -43,12 +43,11 @@ function startGame() {
 
   document.onkeydown = (e) => {
     let letter = e.key.toUpperCase();
-    let guessed = gameHorca.guessed;
-    if (checkLetter(letter) && secretWord.indexOf(letter)) {
+    if (checkLetter(letter) && secretWord.includes(letter)) {
       for (let i = 0; i < secretWord.length; i++) {
         if (secretWord[i] === letter) {
-          guessed.push(letter);
-          console.log(secretWord);
+          gameHorca.guessed.push(letter);
+          console.log(gameHorca.guessed);
         }
       }
     }

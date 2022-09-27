@@ -2,6 +2,10 @@
     --darkblue: #0a3871;
 }
 
+.game-page {
+    margin-bottom: 2.5rem;
+}
+
 .container__game {
     height: 100%;
 }

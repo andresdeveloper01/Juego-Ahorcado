@@ -83,10 +83,6 @@ body {
     background-color: #e0e3f0;
 }
 
-footer {
-    margin-top: 2.5rem;
-}
-
 .container-footer {
     align-items: center;
     color: var(--darkblue);
