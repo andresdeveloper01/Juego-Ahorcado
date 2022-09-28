@@ -1,6 +1,6 @@
 const btnStart = document.querySelector(".btn-start");
 const btnNewWord = document.querySelector(".btn-newWord");
-const game = (document.querySelector(".game-page").style.display = "none");
+const gamePage = (document.querySelector(".game-page").style.display = "none");
 const newWord = (document.querySelector(".newWord-page").style.display =
   "none");
 
@@ -19,10 +19,9 @@ let words = [
   "GITHUB",
   "GIT",
 ];
-let secretWord = "";
 
 function hide() {
-  return game;
+  return gamePage;
 }
 
 btnStart.onclick = startGame;
@@ -32,7 +31,7 @@ btnNewWord.onclick = addnewWord;
 function randomWord() {
   const random = Math.floor(Math.random() * words.length);
   const rWord = words[random].toUpperCase();
-  secretWord = rWord;
+  gameHorca.secretWord = rWord;
   draw(gameHorca);
 }
 
@@ -41,18 +40,7 @@ function startGame() {
   document.querySelector(".game-page").style.display = "block";
   randomWord();
 
-  document.onkeydown = (e) => {
-    let letter = e.key.toUpperCase();
-    if (checkLetter(letter) && secretWord.includes(letter)) {
-      for (let i = 0; i < secretWord.length; i++) {
-        if (secretWord[i] === letter) {
-          gameHorca.guessed.push(letter);
-          console.log(gameHorca.guessed);
-        }
-      }
-    }
-  };
-  console.log(secretWord);
+  console.log(gameHorca.secretWord);
 }
 
 function addnewWord() {
