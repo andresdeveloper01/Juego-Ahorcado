@@ -3,6 +3,10 @@ const btnNewWord = document.querySelector(".btn-newWord");
 const gamePage = (document.querySelector(".game-page").style.display = "none");
 const newWord = (document.querySelector(".newWord-page").style.display =
   "none");
+const btnNewGame = document.querySelector(".btn-newGame");
+const btnDesist = document.querySelector(".btn-desist");
+const openModal = document.querySelector(".modal");
+const closeModal = document.querySelector(".modal__close");
 
 let words = [
   "Pelota",
@@ -26,6 +30,8 @@ function hide() {
 
 btnStart.onclick = startGame;
 btnNewWord.onclick = addnewWord;
+btnNewGame.onclick = newGame;
+btnDesist.onclick = desist;
 
 //generar palabra aleatoria y cambiar a la seccion de juego
 function randomWord() {
@@ -46,4 +52,17 @@ function startGame() {
 function addnewWord() {
   document.querySelector(".home-page").style.display = "none";
   document.querySelector(".newWord-page").style.display = "block";
+}
+
+function newGame() {
+  startGame();
+  gameHorca.state = 8;
+  gameHorca.guessed = [];
+  gameHorca.wrong = [];
+  draw(gameHorca);
+}
+
+function desist() {
+  document.querySelector(".home-page").style.display = "block";
+  document.querySelector(".game-page").style.display = "none";
 }

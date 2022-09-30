@@ -2,7 +2,7 @@ let gameHorca = {
   state: 8,
   guessed: [],
   wrong: [],
-  secretWord: "ALURA",
+  secretWord: "",
 };
 let letters = [];
 
@@ -57,6 +57,8 @@ function guess(gameHorca, letter) {
     return;
   }
 
+  //obtener letras adivinadas
+
   let guessed = gameHorca.guessed;
   let wrong = gameHorca.wrong;
   if (guessed.indexOf(letter) >= 0 || wrong.indexOf(letter) >= 0) {
@@ -83,13 +85,36 @@ function guess(gameHorca, letter) {
 }
 
 console.log(gameHorca);
-window.onkeydown = function guessLetter(e) {
+
+function guessLetter(texto) {
+  document.getElementById("words").texto;
+  let text = texto.charAt(texto.length - 1);
+  text = text.toUpperCase();
+  guess(gameHorca, text);
+  draw(gameHorca);
+}
+
+window.onkeypress = function guessLetter(e) {
   let letter = e.key;
   letter = letter.toUpperCase();
-  if (/[^A-ZÑ]/.test(letter)) {
+  if (/^[A-zÑñ]*$/.test(letter)) {
+    // console.log(letter);
+    guess(gameHorca, letter);
+    draw(gameHorca);
+  }
+  let state = gameHorca.state;
+  if (state === 9) {
+    winAlert(e);
+  } else if (state === 1) {
     return;
   }
-  guess(gameHorca, letter);
-  draw(gameHorca);
-  console.log(letter);
 };
+
+function winAlert() {
+  openModal.classList.add("modal--show");
+}
+
+closeModal.addEventListener("click", (e) => {
+  e.preventDefault();
+  openModal.classList.remove("modal--show");
+});

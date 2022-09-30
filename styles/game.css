@@ -29,6 +29,18 @@
     justify-content: center;
 }
 
+#words {
+    color: transparent;
+    outline: none;
+    border: none;
+    background: transparent;
+    position: relative;
+    bottom: 3rem;
+    height: 2rem;
+    left: 1rem;
+    width: 90%;
+}
+
 .word {
     text-align: center;
     margin: 15px;
@@ -78,4 +90,63 @@
     font-size: 16px;
     line-height: 19px;
     font-weight: 400;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.modal--show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: .5s;
+}
+
+.modal__container {
+    background-color: #f3f5f6;
+    border-radius: 10px;
+    color: var(--darkblue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 10rem;
+    margin: 15em auto;
+    padding: 2em 1.5em;
+    text-align: center;
+    width: 30%;
+    backdrop-filter: blur(10px);
+}
+
+.modal__title {
+    font-size: 2.5rem;
+}
+
+.modal__paragraph {
+    font-size: 1.5rem;
+    margin: 25px 0;
+    color: #495057;
+}
+
+
+.modal__close {
+    background: var(--darkblue);
+    border-radius: 10px;
+    color: #fff;
+    margin: 0 auto;
+    padding: 1em 2em;
+    text-decoration: none;
+    width: 10%;
+}
+
+.modal__close:active {
+    transform: scale(.95);
 }

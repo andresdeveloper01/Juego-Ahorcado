@@ -52,8 +52,8 @@ body {
     width: 317px;
 }
 
-.btn-start:hover {
-    transform: scale(.9);
+.btn-start:active {
+    transform: scale(.95);
 }
 
 .btn-start:focus {
@@ -74,8 +74,8 @@ body {
     width: 284px;
 }
 
-.btn-newWord:hover {
-    transform: scale(.9);
+.btn-newWord:active {
+    transform: scale(.95);
 }
 
 
