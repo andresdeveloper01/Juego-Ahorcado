@@ -84,14 +84,14 @@ function guess(gameHorca, letter) {
   }
 }
 
-console.log(gameHorca);
-
 function guessLetter(texto) {
   document.getElementById("words").texto;
   let text = texto.charAt(texto.length - 1);
   text = text.toUpperCase();
-  guess(gameHorca, text);
-  draw(gameHorca);
+  if (/^[A-zÑñ]*$/.test(text)) {
+    guess(gameHorca, text);
+    draw(gameHorca);
+  }
 }
 
 window.onkeypress = function guessLetter(e) {
@@ -104,17 +104,30 @@ window.onkeypress = function guessLetter(e) {
   }
   let state = gameHorca.state;
   if (state === 9) {
-    winAlert(e);
+    winAlert();
+    newGame();
   } else if (state === 1) {
-    return;
+    gameOver();
+    newGame();
   }
 };
 
 function winAlert() {
-  openModal.classList.add("modal--show");
+  openModal.classList.add("modal__win--show");
+}
+
+function gameOver() {
+  openModalEnd.classList.add("modal__gameOver--show");
+  let end = document.getElementById("end");
+  end.innerText = "La palabra era " + gameHorca.secretWord;
 }
 
 closeModal.addEventListener("click", (e) => {
   e.preventDefault();
-  openModal.classList.remove("modal--show");
+  openModal.classList.remove("modal__win--show");
+});
+
+closeModalEnd.addEventListener("click", (e) => {
+  e.preventDefault();
+  openModalEnd.classList.remove("modal__gameOver--show");
 });

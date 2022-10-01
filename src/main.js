@@ -5,8 +5,10 @@ const newWord = (document.querySelector(".newWord-page").style.display =
   "none");
 const btnNewGame = document.querySelector(".btn-newGame");
 const btnDesist = document.querySelector(".btn-desist");
-const openModal = document.querySelector(".modal");
+const openModal = document.querySelector(".modal__win");
+const openModalEnd = document.querySelector(".modal__gameOver");
 const closeModal = document.querySelector(".modal__close");
+const closeModalEnd = document.querySelector(".modal__close--end");
 
 let words = [
   "Pelota",
@@ -22,6 +24,11 @@ let words = [
   "REACT",
   "GITHUB",
   "GIT",
+  "GOOGLE",
+  "NETFLIX",
+  "DISNEY",
+  "YOUTUBE",
+  "FACEBOOK",
 ];
 
 function hide() {
@@ -45,8 +52,6 @@ function startGame() {
   document.querySelector(".home-page").style.display = "none";
   document.querySelector(".game-page").style.display = "block";
   randomWord();
-
-  console.log(gameHorca.secretWord);
 }
 
 function addnewWord() {

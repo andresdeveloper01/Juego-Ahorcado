@@ -73,26 +73,28 @@
     background: var(--darkblue);
     border: none;
     border-radius: 24px;
+    color: #fff;
+    cursor: pointer;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     height: 67px;
     width: 332px;
-    color: #fff;
 }
 
 .btn-desist {
-    width: 332px;
-    height: 67px;
     border: 1px solid var(--darkblue);
     border-radius: 24px;
     color: var(--darkblue);
+    cursor: pointer;
     font-size: 16px;
-    line-height: 19px;
     font-weight: 400;
+    height: 67px;
+    line-height: 19px;
+    width: 332px;
 }
 
-.modal {
+.modal__win {
     position: fixed;
     top: 0;
     left: 0;
@@ -105,7 +107,7 @@
     transition: .5s;
 }
 
-.modal--show {
+.modal__win--show {
     opacity: 1;
     pointer-events: unset;
     transition: .5s;
@@ -137,7 +139,8 @@
 }
 
 
-.modal__close {
+.modal__close,
+.modal__close--end {
     background: var(--darkblue);
     border-radius: 10px;
     color: #fff;
@@ -147,6 +150,27 @@
     width: 10%;
 }
 
-.modal__close:active {
+
+.modal__close,
+.modal__close--end:active {
     transform: scale(.95);
+}
+
+.modal__gameOver {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.modal__gameOver--show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: .5s;
 }
