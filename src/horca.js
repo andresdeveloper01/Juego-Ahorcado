@@ -57,7 +57,7 @@ function guess(gameHorca, letter) {
     return;
   }
 
-  //obtener letras adivinadas
+  // Actualizar estado
 
   let guessed = gameHorca.guessed;
   let wrong = gameHorca.wrong;
@@ -84,6 +84,8 @@ function guess(gameHorca, letter) {
   }
 }
 
+// Obtener letras de input
+
 function guessLetter(texto) {
   document.getElementById("words").texto;
   let text = texto.charAt(texto.length - 1);
@@ -92,7 +94,19 @@ function guessLetter(texto) {
     guess(gameHorca, text);
     draw(gameHorca);
   }
+
+  // Mostrar gando o perdido
+  let state = gameHorca.state;
+  if (state === 9) {
+    winAlert();
+    newGame();
+  } else if (state === 1) {
+    gameOver();
+    newGame();
+  }
 }
+
+// Obtener letra presionada en el teclado
 
 window.onkeypress = function guessLetter(e) {
   let letter = e.key;
