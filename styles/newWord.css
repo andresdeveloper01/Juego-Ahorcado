@@ -1,0 +1,35 @@
+:root {
+    --darkblue: #0a3871;
+}
+
+.newWord-page {
+    height: 95vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.container__newWord {
+    height: 100%;
+}
+
+.container__newWord textarea {
+    position: relative;
+    margin-top: 240px;
+    left: 376px;
+    width: 40%;
+    height: 40%;
+    resize: none;
+    background: transparent;
+}
+
+.container__newWord img {
+    width: 16px;
+    height: 16px;
+}
+
+.btns__newWord {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    gap: 10px;
+    justify-content: center;
+}
