@@ -4,7 +4,6 @@ let gameHorca = {
   wrong: [],
   secretWord: "",
 };
-let letters = [];
 
 let $html = {
   ahorcado: document.getElementById("ahorcado"),

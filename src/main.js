@@ -22,7 +22,6 @@ let words = [
   "ECUADOR",
   "CHILE",
   "ORACLE",
-  "JAVASCRIPT",
   "REACT",
   "GITHUB",
   "GIT",
@@ -85,6 +84,7 @@ function getNewWord() {
     console.log(inputWord);
     newWords.push(inputWord);
     localStorage.setItem("myNewWords", JSON.stringify(newWords));
+    document.getElementById("newWord__text").value = "";
   }
 }
 function save() {
