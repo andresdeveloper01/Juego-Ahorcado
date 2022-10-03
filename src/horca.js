@@ -99,9 +99,11 @@ function guessLetter(texto) {
   if (state === 9) {
     winAlert();
     newGame();
+    document.getElementById("words").value = "";
   } else if (state === 1) {
     gameOver();
     newGame();
+    document.getElementById("words").value = "";
   }
 }
 
