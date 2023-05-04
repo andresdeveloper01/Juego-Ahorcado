@@ -10,4 +10,4 @@ La web esta hecha con HTML, CSS y JavaScript.
 ### Prueba el juego aqui
 [Challenge Juego del ahorcado de One Next Education](https://game-ahorcadoandres.netlify.app/)
 
-<img src="./Ahorcado.png" alt="Juego del Ahorcado">
+<img src="./Ahorcado.webp" alt="Juego del Ahorcado">
